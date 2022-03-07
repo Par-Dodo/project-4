@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import sqlalchemy
+# import sqlalchemy
 import csv
 import time
 import pickle
@@ -8,13 +8,13 @@ import pickle
 from decimal import Decimal
 from flask import Flask, render_template, redirect
 from flask import Flask, redirect, url_for, request
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from flask import Response
 from flask import request
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session, session
-from sqlalchemy import create_engine, func
-from sqlalchemy_utils import database_exists, create_database
+# from sqlalchemy.ext.automap import automap_base
+# from sqlalchemy.orm import Session, session
+# from sqlalchemy import create_engine, func
+# from sqlalchemy_utils import database_exists, create_database
 from flask import Flask, jsonify
 
 # app = Flask(__name__)
@@ -94,4 +94,4 @@ def predict():
 
 #Run the application
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(threaded=True, port=5000)
